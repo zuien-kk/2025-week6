@@ -1,0 +1,57 @@
+// 複製助教的基本樣式設定
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #141a1f;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+
+// 原權重 11 分
+// 壓不過 Bootstrap
+// 暫時用 important 提升權重
+
+.btns {
+    a,
+    button {
+        padding-top: var(--btns-py) !important;
+        padding-bottom: var(--btns-py) !important;
+        padding-left: var(--btns-px) !important;
+        padding-right: var(--btns-px) !important;
+    }
+}
+
+.tabs-content {
+    & > * {
+        padding: var(--tabs-content-p);
+        border-radius: 24px;
+        box-shadow: 0px 0px 16px 0px #0000001F;
+        background: #FCFCFD;
+    }
+}

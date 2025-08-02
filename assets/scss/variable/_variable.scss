@@ -1,0 +1,49 @@
+$style-map: (
+  box: (width,height),
+  w: (width),
+  h: (height),
+  p: (padding),
+  px: (padding-left,padding-right),
+  py: (padding-top,padding-bottom),
+  pb: (padding-bottom),
+  me: (margin-right),
+  mb: (margin-bottom),
+  gx: (column-gap),
+  gy: (row-gap),
+  gw: (--col-width),
+  fs: (font-size),
+
+// bootstrap
+
+  bs-gx: (--bs-gutter-x),
+  bs-gy: (--bs-gutter-y),
+
+// btns
+
+  btns-px: (--btns-px),
+  btns-py: (--btns-py),
+
+// tabs-content
+
+  tabs-content-p: (--tabs-content-p),
+);
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$background: (
+  secondary: #F0F3F5,
+);
+
+
+
+
+
+
+
+

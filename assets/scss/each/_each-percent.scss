@@ -1,0 +1,35 @@
+@each $data-key, $data-value-lists in $data-percent-map {
+  @each $data-value-list in $data-value-lists {
+    
+    //定義清單中的三個 item 為變數
+    
+    $breakpoint: nth($data-value-list,1);
+    $parents: nth($data-value-list,2);
+    $child: nth($data-value-list,3);
+    
+    //百分比計算公式     
+    
+    $value: calc(100% / $parents * $child);
+    
+    //非響應式     
+    
+    @if $breakpoint == "base" {
+      .#{$data-key}-#{$breakpoint}-#{$parents}-#{$child} {
+          @each $style-value in map-get($style-map, $data-key){
+            #{$style-value}: #{$value};
+          }    
+      }
+
+    //響應式     
+      
+    }@else {
+      @media(min-width: map-get($breakpoints,$breakpoint)){
+        .#{$data-key}-#{$breakpoint}-#{$parents}-#{$child} {
+          @each $style-value in map-get($style-map, $data-key){
+            #{$style-value}: #{$value};
+          }
+        }      
+      }  
+    }
+  }
+}

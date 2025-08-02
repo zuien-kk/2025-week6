@@ -1,0 +1,23 @@
+@function replace-character($number,$target,$replacement){
+  
+  //把數字轉成字串
+  //才能使用 str-index() str-slice()
+  
+  $string: #{$number};
+  
+  //str-index() 可以找到字串是否有目標字元
+  //有目標字元會回傳數字，這個數字代表從左數過來是第幾個
+  //沒目標字元會回傳 null ，並使用 @if 回傳原始數字   
+  
+  $index: str-index($string, $target);  
+  @if $index == null {
+    @return $number;
+  }
+  
+  //如果有找到目標字元，就把它前後的部分提取出來
+  //再加上替代字元重新組合成一個新字串回傳
+
+  $before: str-slice($string,1,$index - 1);
+  $after: str-slice($string, $index + 1);  
+  @return $before + $replacement + $after;
+}

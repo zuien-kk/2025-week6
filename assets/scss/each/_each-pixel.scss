@@ -1,0 +1,53 @@
+@each $data-key, $data-value-lists in $data-pixel-map {
+  @each $data-value-list in $data-value-lists{
+    
+    //定義最小響應式的值跟最大響應式的值
+    //如果 $data-value-list 清單中有兩個 item
+    //代表清單中含有最小響應式的值跟最大響應式的值，賦值用 nth($data-value-list,2)
+    //如果 $data-value-list 清單中只有一個 item
+    //代表清單中最小響應式的值跟最大響應式的值相同，賦值用 $min-bp-value 且不做響應式（後面 @if 處理)
+    
+    $min-bp-value: nth($data-value-list,1);
+    $max-bp-value: if(length($data-value-list) == 2, nth($data-value-list,2), $min-bp-value);
+    
+    //處理樣式名為小數或負數的字元轉換
+    //負數還好但小數不處理會報錯     
+    
+    $min-bp-name: replace-character($min-bp-value,".","_");
+    $min-bp-name: replace-character($min-bp-name,"-","n");
+    
+    $max-bp-name: replace-character($max-bp-value,".","_");
+    $max-bp-name: replace-character($max-bp-name,"-","n");
+    
+    
+    .#{$data-key}-#{$min-bp-name}-#{$max-bp-name}{
+      @each $style-value in map-get($style-map, $data-key){
+        #{$style-value}: #{$min-bp-value}px;
+      }
+      
+      //如果最小響應式的值跟最大響應式的值不同才做響應式
+      //相同就只生成一個樣式       
+      //這樣可減少重複樣式     
+          
+      @if $min-bp-value != $max-bp-value {
+
+        $i: 0;    
+        
+        @each $bp-key, $bp-value in $breakpoints {
+          
+          //計算等差數列並透過 @each 會跑 $breakpoints 中會根據斷點有幾個就跑幾次
+          //來讓 $i 每次都能 +1 並套回公式 $gap-value
+          
+          $i: $i + 1;
+          $gap-value: calc($min-bp-value + (($max-bp-value - $min-bp-value) / length($breakpoints)) * $i);
+
+          @media(min-width: #{$bp-value}) {
+            @each $style-value in map-get($style-map, $data-key){
+              #{$style-value}: #{$gap-value}px;
+            }                
+          }      
+        }    
+      }      
+    }
+  }
+}
