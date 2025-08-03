@@ -1,4 +1,4 @@
-@function replace-character($number,$target,$replacement){
+@function replace-char($number,$target,$replacement){
   
   //把數字轉成字串
   //才能使用 str-index() str-slice()
@@ -20,4 +20,19 @@
   $before: str-slice($string,1,$index - 1);
   $after: str-slice($string, $index + 1);  
   @return $before + $replacement + $after;
+}
+
+
+// y = mx
+// y / x = mx / x
+// y / x = m
+
+// y = mx + b
+// y - (mx) = mx + b - (mx)
+// y - mx = b
+
+@function px($y1, $y2, $x1: 500, $x2: 1500){
+  $m: calc(($y2 - $y1) / ($x2 - $x1) * 100);
+  $b: calc($y1 - $m * $x1 / 100);
+  @return clamp(#{$y1}px , #{$m}vw + #{$b}px, #{$y2}px);
 }

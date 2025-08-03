@@ -1,7 +1,3 @@
-// 非常手段
-
-footer{
-  p{
-    letter-spacing: 0;
-  }
+.footer-btns{
+  @include btns(24,16,8,8);
 }

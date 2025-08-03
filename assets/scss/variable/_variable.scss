@@ -6,6 +6,7 @@ $style-map: (
   px: (padding-left,padding-right),
   py: (padding-top,padding-bottom),
   pb: (padding-bottom),
+  pe: (padding-right),
   me: (margin-right),
   mb: (margin-bottom),
   gx: (column-gap),
@@ -18,14 +19,9 @@ $style-map: (
   bs-gx: (--bs-gutter-x),
   bs-gy: (--bs-gutter-y),
 
-// btns
+  bs-nav-link-px: (--bs-nav-link-padding-x,--bs-navbar-nav-link-padding-x),
+  bs-nav-link-py: (--bs-nav-link-padding-y),
 
-  btns-px: (--btns-px),
-  btns-py: (--btns-py),
-
-// tabs-content
-
-  tabs-content-p: (--tabs-content-p),
 );
 
 $breakpoints: (
@@ -36,9 +32,7 @@ $breakpoints: (
   xxl: 1400px,
 );
 
-$background: (
-  secondary: #F0F3F5,
-);
+
 
 
 

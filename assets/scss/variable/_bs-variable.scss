@@ -1,0 +1,156 @@
+// p = primary
+// s = secondary
+// n = natural
+// su = success
+// d = danger
+// w = warning
+// a = alpha
+
+$p97: #F1F4FD;
+$p90: #D2D9F9;
+$p80: #A4B4F3;
+$p70: #778EEE;
+$p60: #4A69E8;
+$p40: #1736B5;
+$p25: #0E2271;
+
+$s90: #D7F4EC;
+$s70: #87DEC5;
+$s50: #36C99F;
+$s35: #268C6F;
+
+$n95: #F0F3F5;
+$n90: #E0E5EB;
+$n85: #D1D9E1;
+$n75: #B2BFCC;
+$n60: #8599AD;
+$n50: #667F99;
+$n30: #3D4D5C;
+$n10: #141A1F;
+
+$a60: rgba($n10,0.6);
+
+$su90: #DEFCCF;
+$su40: #47C20A;
+$su30: #369108;
+
+$d90: #FFD0CC;
+$d70: #FF7467;
+$d45: #E51300;
+
+$w90: #FFEACC;
+$w48: #F58F00;
+$w35: #B26800;
+
+// 語意化顏色
+
+$primary:   $p60;
+$secondary: $s50;
+$success:   $su40;
+$info:      $n50;
+$warning:   $w48;
+$danger:    $d45;
+$black:     $n10;
+$white:     #FCFCFD;
+$light:     $white;
+$dark:      $black;
+
+// map
+
+$color-primary: (
+    p97: $p97,
+    p90: $p90,
+    p80: $p80,
+    p70: $p70,
+    p60: $p60,
+    p40: $p40,
+    p25: $p25,
+);
+
+$color-secondary: (
+    s90: $s90,
+    s70: $s70,
+    s50: $s50,
+    s35: $s35,
+);
+
+$color-natural: (
+    n95: $n95,
+    n90: $n90,
+    n85: $n85,
+    n75: $n75,
+    n60: $n60,
+    n50: $n50,
+    n30: $n30,
+    n10: $n10,
+);
+
+$color-alpha: (
+    a60: $a60,
+);
+
+$color-success: (
+    su90: $su90,
+    su40: $su40,
+    su30: $su30,
+);
+
+$color-danger: (
+    d90: $d90,
+    d70: $d70,
+    d45: $d45,
+);
+
+$color-warning: (
+    w90: $w90,
+    w48: $w48,
+    w35: $w35,
+);
+
+// 將設計稿顏色匯入並覆蓋 bootstrap map
+
+$theme-colors:(
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+$theme-colors: map-merge($theme-colors,$color-primary);
+$theme-colors: map-merge($theme-colors,$color-secondary);
+$theme-colors: map-merge($theme-colors,$color-natural);
+$theme-colors: map-merge($theme-colors,$color-alpha);
+$theme-colors: map-merge($theme-colors,$color-success);
+$theme-colors: map-merge($theme-colors,$color-danger);
+$theme-colors: map-merge($theme-colors,$color-warning);
+
+
+// 圓角
+
+$border-radius:         16px;
+$border-radius-sm:      12px;
+$border-radius-lg:      24px;
+
+// 全域樣式
+
+$body-color:    $black;
+$body-bg:       $white;
+
+$headings-margin-bottom: 0;
+$paragraph-margin-bottom: 0;
+
+$link-decoration: none;
+
+
+
+
+
+
+
+
+
+
+

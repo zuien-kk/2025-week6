@@ -1,0 +1,13 @@
+
+@mixin btns($px1,$px2,$py1,$py2){
+    a,
+    button {
+
+  // ai說明：
+  // 加上 #{} 是告訴 SCSS：
+  // 請先處理這個 SCSS function，然後把結果轉成字串塞進變數裡。
+
+        --bs-btn-padding-x: #{px($px1,$px2)};
+        --bs-btn-padding-y: #{px($py1,$py2)};
+    }
+}
