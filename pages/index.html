@@ -10,8 +10,458 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <h1 class="index-title">我是首頁</h1>
-    <img src="../assets/images/dog.jpg" style="width: 300px;" alt="cat">
+    <!-- 一起陪伴、探索 還有你那些未完成的夢 -->
+    <div class="container">
+      <div class="py-40-40 w-xl-1296-815 mx-auto">
+        <article
+          style="
+            background-image: url(../assets/images/gradient-ball.png);
+            background-size: cover;
+          ">
+            <h1 class="display pt-8-40 pb-24-24 text-center">
+              <span class="d-block">一起陪伴、探索</span>
+              <span class="d-block">還有你那些未完成的夢</span>
+            </h1>
+
+            <div class="row bs-gy-16-24">
+              <div class="col-xl">
+                <div class="text-center text-xl-start f-lg text-info">
+                  <p>自由工作很美，也很難。</p>
+                  <p>我們用 1 對 1 陪伴，陪你從第一步開始，直到夢想變成日常</p>
+                </div>
+              </div>
+              <div class="col-xl-auto">
+                <div class="btns-ps-8-20">
+                  <button class="btn btn-secondary t-2 d-flex align-items-center mx-auto">
+                    開始你的職旅
+                    <span class="material-icons-outlined">chevron_right</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 滿版圖片 4 張 -->
+
+
+    <div class="mb-96-160">
+      <div class="container-fluid">
+        <div class="row bs-gx-0-24 row-cols-xl-3">
+          <div class="d-none d-xl-block"><img class="h-100" src="../assets/images/hero-1.png" alt="hero-1"></div>
+          <div>
+            <div class="row gx-0 bs-gy-0-24 d-none d-xl-block">
+              <div><img class="h-100" src="../assets/images/hero-2.png" alt="hero-2"></div>
+              <div><img class="h-100" src="../assets/images/hero-3.png" alt="hero-3"></div>
+            </div>
+          </div>
+          <div><img class="h-100" src="../assets/images/hero-4.png" alt="hero-4"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 圖片輪播區塊 -->
+
+    <div class="mb-bp-double py-12-12">
+      <div class="container">
+        <div class="row bs-gy-24-24">
+          <div class="col-xxl-4 d-flex align-items-center">
+            <article>
+              <img class="mb-16-24" src="../assets/images/logo-icon.svg" alt="logo">
+              <h2 class="t-5 mb-16-24">
+                <span class="d-block">他們已經踏上職旅</span>
+                <span class="d-block">聽聽他們的故事</span>
+              </h2>
+              <p class="f-lg text-info">每一段職涯轉型都有獨特挑戰，這些曾經與你有相同疑惑的夥伴，現在正過著他們嚮往的生活</p>
+              
+              
+
+            </article>
+          </div>
+          <div class="col-xxl-8">
+              <div class="row mx-0 scroll scroll-primary">
+
+                <div>
+                  <div class="card h-100 mb-3 tag-year tag-year-2">
+                    <img src="../assets/images/story-cover-1.png" class="card-img-top" alt="story-cover-1">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title t-2 mb-16-16">轉型成功的設計師</h5>
+                      <p class="card-text f-sm text-info mb-16-16">從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。</p>
+                      <p class="card-text mt-auto"><span class="f-md fw-bold me-8-8 pe-8-8 border-end">視覺設計師</span><span class="f-sm">郭敏迪 (34y)</span></p>
+                    </div>                        
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card h-100 mb-3 tag-year tag-year-2">
+                    <img src="../assets/images/story-cover-2.png" class="card-img-top" alt="story-cover-2">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title t-2 mb-16-16">數位遊牧生活實踐者</h5>
+                      <p class="card-text f-sm text-info mb-16-16">兩年前我只想環遊世界，卻不知道怎麼開始。職旅給了我遠端工作與生活規劃的指導。現在我在五個國家工作過，收入比以前多 20%。每次打開電腦，看見窗外不同的風景，都慶幸當初那一個決定。</p>
+                      <p class="card-text mt-auto"><span class="f-md fw-bold me-8-8 pe-8-8 border-end">內容策略師</span><span class="f-sm">林雨潔 (29y)</span></p>
+                    </div>                        
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card h-100 mb-3 tag-year tag-year-3">
+                    <img src="../assets/images/story-cover-3.png" class="card-img-top" alt="story-cover-3">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title t-2 mb-16-16">中年轉型的工程師</h5>
+                      <p class="card-text f-sm text-info mb-16-16">從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。</p>
+                      <p class="card-text mt-auto"><span class="f-md fw-bold me-8-8 pe-8-8 border-end">系統架構顧問</span><span class="f-sm">張世明 (62y)</span></p>
+                    </div>                        
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 選擇職旅 WorkWay -->
+
+    <div class="bg-n95 pt-bp-double pb-48-80">
+      <div class="container">
+        
+        <div class="d-flex justify-content-center position-relative mb-24-48">
+          <article class="text-center">
+            <img src="../assets/images/why-workway.svg" alt="why-workway">
+            <h2 class="t-5">選擇職旅 WorkWay</h2>
+          </article>
+
+          <img class="position-absolute end-0 adv-vectors-top d-none d-xxl-block" src="../assets/images/adv-vectors.svg" alt="adv-vectors">
+        </div>
+        
+        <div class="row row-cols-lg-3 mb-24-48 bs-gy-16-16">
+          <div>
+            <div class="position-relative">
+              <img class="rounded-3" src="../assets/images/adv-1.png" alt="adv-1">
+              <div class="position-absolute bottom-0 start-0 tag-workway d-flex align-items-center">
+                <span class="material-symbols-outlined text-primary me-8-8">
+                ads_click
+                </span>
+                <span class="t-2">實戰經驗</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="position-relative">
+              <img class="rounded-3" src="../assets/images/adv-2.png" alt="adv-2">
+              <div class="position-absolute bottom-0 start-0 tag-workway d-flex align-items-center">
+                <span class="material-symbols-outlined text-primary me-8-8">
+                ads_click
+                </span>
+                <span class="t-2">全方位支持</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="position-relative">
+              <img class="rounded-3" src="../assets/images/adv-3.png" alt="adv-3">
+              <div class="position-absolute bottom-0 start-0 tag-workway d-flex align-items-center">
+                <span class="material-symbols-outlined text-primary me-8-8">
+                ads_click
+                </span>
+                <span class="t-2">社群力量</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <span class="text-info">不是套模板的建議，而是為你量身打造的陪伴！</span>
+
+      </div>
+    </div>
+
+    <!-- 遇見你的職涯夥伴 -->
+
+    
+    <div class="py-48-80 position-relative  overflow-hidden">
+      <div class="container">
+        <row class="row row-cols-xxl-2 bs-gy-24-24">
+          <div><img src="../assets/images/team.png" alt="team"></div>
+          <div>
+            <article>
+              <div class="row gx-0 bs-gy-16-24">
+                <div class="text-center text-xxl-start">
+                  <h2 class="t-5">遇見你的職涯夥伴</h2>
+                </div>
+                <p class="text-info f-lg">每位顧問都有獨特專長，更重要的是：</p>
+                <p class="bg-n95 text-primary t-2 p-8-8">“ 他們都曾面對你正在經歷的挑戰 ”</p>
+                <p class="f-lg text-info">職旅 WorkWay 匯集了來自不同領域、擁有豐富實戰經驗的自由工作者與數位遊牧專家。我們的顧問不只教授理論，更分享親身經歷的挑戰與解決之道。</p>
+                <p class="f-lg text-info">我們相信，最好的指導來自於那些已經走過你想走的路，並願意伸出手拉你一把的人。</p>
+                <div class="btns-ps-8-20"> 
+                  <button type="button" class="btn btn-dark d-flex align-items-center justify-content-center col-md-auto order-1 order-md-2">
+                      了解更多職旅夥伴
+                      <span class="material-icons-outlined">chevron_right</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </row>
+      
+        
+      </div>
+      
+      
+        <div class="position-absolute ball top-100 start-100 translate-middle"
+            style="
+              background-image: url(../assets/images/gradient-ball.png);
+              background-size: cover;
+            ">
+        </div>
+
+    </div>
+
+    <!-- 服務流程 -->
+
+    <div class="bg-p60 py-48-80">
+      <div class="container">
+        <article class="text-center text-white mb-24-48">
+  
+          <h2 class="t-5 mb-16-24">服務流程</h2>
+          <p class="f-lg">簡單四步，踏上你的職旅</p>
+        </article>
+
+        <div class="row flex-nowrap row-cols-xl-4 row-cols-lg-2 scroll scroll-secondary">
+
+          <div>
+
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center pt-64-64 mb-16-24">
+                <img src="../assets/images/serve-1.svg" class="box-160-160" alt="serve-1">
+              </div>
+
+              <div class="card-body text-center mb-48-48">
+                <h5 class="card-title mb-16-24 t-2">免費註冊會員</h5>
+                <p class="card-text f-sm text-info">透過網站左上角按鈕，立即註冊免費會員，與我們開始建立連結。</p>
+              </div>
+
+              <div class="tag-serve f-sm">
+                <span class="me-8-8">STEP</span>
+                <span>1</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center pt-64-64 mb-16-24">
+                <img src="../assets/images/serve-2.svg" class="box-160-160" alt="serve-2">
+              </div>
+
+              <div class="card-body text-center mb-48-48">
+                <h5 class="card-title mb-16-24 t-2">填寫職旅計劃</h5>
+                <p class="card-text f-sm text-info">了解你的技能、熱情與市場需求的交會點，找出屬於你的獨特定位。</p>
+              </div>
+
+              <div class="tag-serve f-sm">
+                <span class="me-8-8">STEP</span>
+                <span>2</span>
+              </div>
+
+            </div>
+            
+          </div>
+  
+          <div>
+
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center pt-64-64 mb-16-24">
+                <img src="../assets/images/serve-3.svg" class="box-160-160" alt="serve-3">
+              </div>
+
+              <div class="card-body text-center mb-48-48">
+                <h5 class="card-title mb-16-24 t-2">初次諮詢</h5>
+                <p class="card-text f-sm text-info">依據你的目標與現況，給予最直接的建議，建立清晰的轉型思路。</p>
+              </div>
+
+              <div class="tag-serve f-sm">
+                <span class="me-8-8">STEP</span>
+                <span>3</span>
+              </div>
+
+            </div>
+            
+          </div>
+
+          <div>
+
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center pt-64-64 mb-16-24">
+                <img src="../assets/images/serve-4.svg" class="box-160-160" alt="serve-4">
+              </div>
+
+              <div class="card-body text-center mb-48-48">
+                <h5 class="card-title mb-16-24 t-2">實戰指導</h5>
+                <p class="card-text f-sm text-info">專家一對一指導，從品牌建立到客戶開發，每一步都有明確方向。</p>
+              </div>
+
+              <div class="tag-serve f-sm">
+                <span class="me-8-8">STEP</span>
+                <span>4</span>
+              </div>
+
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 你可能有些困惑... -->
+
+
+    <div class="py-48-80"
+    style="
+      background-image: url(../assets/images/bg-grid.png);
+    ">
+      <div class="container">
+        
+        <div class="d-flex justify-content-center mb-24-48">
+          <article class="text-center">
+            <img src="../assets/images/qa-title.svg" alt="qa-title">
+            <h2 class="t-5">你可能有些困惑...</h2>
+          </article>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-5 align-items-end d-none d-xl-flex">
+            <img src="../assets/images/qa.svg" alt="qa">
+          </div>
+          <div class="col-xl-7">
+
+
+            
+            <div class="bp-white border border-n85 rounded-3 shadow mb-16-24">
+              <div class="p-24-24">
+                <div class="pb-16-16 mb-16-16 border-dotted">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="f-lg text-info d-flex   fw-bold">
+                      <span class="me-8-8">Q.</span>
+                      <span>一對一諮詢是怎麼進行的？需要準備什麼嗎？</span>
+                    </h3>
+                    <span class="material-icons-outlined transform-rotate text-info">chevron_right</span>
+                  </div>
+                    
+                </div>
+                <p class="f-lg d-flex">
+                    <span class="me-8-8 fw-bold text-primary">A.</span>
+                    <span>諮詢通常採 Google Meet 或 Zoom，時長約 30 分鐘。我們建議你在預約前先簡單整理目前的狀態、遇到的困難、或想達成的目標。如果你不確定，顧問也會從對話中引導你探索，無需擔心準備不夠。</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="bp-white border border-n85 rounded-3 shadow mb-16-24">
+              <div class="p-24-24">
+                <div class="d-flex justify-content-between">
+                  <h3 class="f-lg text-info d-flex">
+                    <span class="me-8-8 fw-bold">Q.</span>
+                    <span>自由職涯真的可以養活自己嗎？你們怎麼協助？</span>
+                  </h3>
+                  <span class="material-icons-outlined">chevron_right</span>
+                </div>
+              </div>
+            </div>
+            <div class="bp-white border border-n85 rounded-3 shadow mb-16-24">
+              <div class="p-24-24">
+                <div class="d-flex justify-content-between">
+                  <h3 class="f-lg text-info d-flex">
+                    <span class="me-8-8 fw-bold">Q.</span>
+                    <span>職旅 WorkWay 的收費方式是怎麼計算的？</span>
+                  </h3>
+                  <span class="material-icons-outlined">chevron_right</span>
+                </div>
+              </div>
+            </div>
+            <div class="bp-white border border-n85 rounded-3 shadow mb-16-24">
+              <div class="p-24-24">
+                <div class="d-flex justify-content-between">
+                  <h3 class="f-lg text-info d-flex">
+                    <span class="me-8-8 fw-bold">Q.</span>
+                    <span>如果諮詢後發現不適合，會有退款保障嗎？</span>
+                  </h3>
+                  <span class="material-icons-outlined">chevron_right</span>
+                </div>
+              </div>
+            </div>
+            <div class="bp-white border border-n85 rounded-3 shadow">
+              <div class="p-24-24">
+                <div class="d-flex justify-content-between">
+                  <h3 class="f-lg text-info d-flex">
+                    <span class="me-8-8 fw-bold">Q.</span>
+                    <span>我現在還不確定自己要什麼，也可以預約諮詢嗎？</span>
+                  </h3>
+                  <span class="material-icons-outlined">chevron_right</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+
+
+    <!-- 邁向你真正想過的生活，從這裡開始 -->
+
+    <div class="py-40-40">
+      <div class="container">
+        <div class="bg-primary px-24-48 py-16-24 rounded-1 text-white">
+          <article class="pb-24-24 mb-24-24 border-dotted">
+            <img class="mb-24-24" src="../assets/images/logo-icon-w.svg" alt="logo-icon-w">
+            <h3 class="t-4 mb-12-12">邁向你真正想過的生活，從這裡開始</h3>
+            <p class="f-lg">第一次諮詢只要 30 分鐘，可能改變你未來 30 年的生活方式</p>
+          </article>
+          <div class="row align-items-center bs-gy-16-0">
+
+            <div class="col-lg-auto">
+              <div class="d-flex aling-items-center">
+                <span class="material-symbols-outlined me-8-8">
+                call
+                </span>
+                <span>0800-123-123</span>
+              </div>
+
+            </div>
+
+            <div class="col-lg-auto">
+              <div class="d-flex aling-items-center">
+                <span class="material-symbols-outlined me-8-8">
+                mail
+                </span>
+                <span>Sample@mail.com</span>
+              </div>
+            </div>
+
+            <div class="col-lg-auto ms-auto">
+                  <div class="btns-ps-8-20"> 
+                  <button type="button" class="btn btn-dark d-flex align-items-center justify-content-center col-md-auto order-1 order-md-2">
+                      預約免費職涯探索
+                      <span class="material-icons-outlined">chevron_right</span>
+                  </button>
+                </div>            
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
 
     <%- include('./layout/footer'); -%>
 

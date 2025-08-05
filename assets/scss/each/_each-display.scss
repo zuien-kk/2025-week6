@@ -1,0 +1,15 @@
+@each $d-list in $display {
+    .d-#{$d-list} {
+        display: #{$d-list};
+    }
+}
+
+@each $d-list in $display {
+    @each $bp-key, $bp-value in $breakpoints {
+        @media (min-width: #{$bp-value}) {
+            .d-#{$bp-key}-#{$d-list} {
+                display: #{$d-list};
+            }
+        }
+    }
+}

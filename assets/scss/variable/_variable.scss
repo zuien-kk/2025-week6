@@ -5,10 +5,14 @@ $style-map: (
   p: (padding),
   px: (padding-left,padding-right),
   py: (padding-top,padding-bottom),
+  pt: (padding-top),
   pb: (padding-bottom),
   pe: (padding-right),
+  ps: (padding-left),
   me: (margin-right),
   mb: (margin-bottom),
+  mt: (margin-top),
+  ms: (margin-left),
   gx: (column-gap),
   gy: (row-gap),
   gw: (--col-width),
@@ -30,6 +34,10 @@ $breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
+);
+
+$display: (
+  
 );
 
 

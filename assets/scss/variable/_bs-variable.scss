@@ -117,7 +117,9 @@ $theme-colors:(
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "black":      $black,
+  "white":      $white,
 );
 $theme-colors: map-merge($theme-colors,$color-primary);
 $theme-colors: map-merge($theme-colors,$color-secondary);
@@ -143,7 +145,6 @@ $headings-margin-bottom: 0;
 $paragraph-margin-bottom: 0;
 
 $link-decoration: none;
-
 
 
 

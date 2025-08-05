@@ -33,6 +33,13 @@ a {
   }
 }
 
+.btns-ps-8-20{
+  @include btns(8,12,12,12);
+  a,button{
+    padding-left: px(8,20);
+  }
+}
+
 // 標題段落字體樣式
 
 .display{
@@ -48,7 +55,7 @@ a {
   // font-size: 80
   // line-height: 1 = 80px
 
-  $d-min-fs: 48;
+  $d-min-fs: 32;
   $d-max-fs: 80;
   $d-min-lh: $d-min-fs * 1.2;
 
@@ -106,4 +113,114 @@ a {
   line-height: 1.5;
   font-size: px(12,12);
 }
+
+// 處理背景重複部份
+
+$bp-double: 200;
+$bp-min-space: 48;
+$bp-max-space: 80;
+
+$bg-pt-min: $bp-double + $bp-min-space;
+$bg-pt-max: $bp-double + $bp-max-space;
+
+$bp-mb-min: ($bg-pt-min - $bp-min-space * 2) * -1;
+$bp-mb-max: ($bg-pt-max - $bp-max-space * 2) * -1;
+
+.pt-bp-double{
+  padding-top: px($bg-pt-min,$bg-pt-max);
+}
+
+.mb-bp-double{
+  margin-bottom: px($bp-mb-min,$bp-mb-max);
+}
+
+// 滾動滑動
+
+.scroll {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  flex-wrap: nowrap !important; 
+  & > *{
+    scroll-snap-align: start;
+  }
+  &-primary > *{
+    flex: 0 0 px(320,400);
+  }
+  &-secondary > *{
+    flex: 0 0 306px;
+  }
+}
+
+@media(min-width: map-get($breakpoints,sm)){
+  .scroll {
+    &-secondary > *{
+      flex: none;
+    }
+  }
+}
+
+// postition
+
+.tag-year{
+  position: relative;
+  &::after{
+    position: absolute;
+    display: inline-block;
+    top: 12px;
+    left: 12px;
+    color: $white;
+    background: $p60;
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: $border-radius;
+  }
+  &-2::after{
+    content: "數位遊牧 2 年";
+  }
+  &-3::after{
+    content: "數位遊牧 3 年";
+  }
+}
+
+.adv-vectors-top{
+  top: px(-14,-14);
+}
+
+.tag-workway{
+  padding: 12px 24px 12px 12px;
+  border-radius: 0 12px 0 0;
+  background: $n95;
+  color: $n50;
+}
+
+.tag-serve{
+  position: absolute;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 10.5px 16px;
+  border-radius: 24px 0 12px 0;
+  color: $p60;
+  background: $n95;
+}
+
+.ball{
+  width: px(400,800);
+  height: px(400,800);
+}
+
+.shadow{
+  box-shadow: 0px 0px 16px 0px #0000001F;
+}
+
+.border-dotted{
+  border-bottom: 2px dotted $n85;
+}
+
+.transform-rotate{
+  transform: rotate(90deg);
+}
+
+
+
 
