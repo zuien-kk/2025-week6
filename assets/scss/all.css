@@ -15038,6 +15038,11 @@ a {
   transform: rotate(90deg);
 }
 
+@media (min-width: 576px) {
+  .index-story-row {
+    margin-right: calc((50vw - 50%) * -1);
+  }
+}
 .footer-btns a,
 .footer-btns button {
   --bs-btn-padding-x: clamp(24px, -0.8vw + 28px, 16px);

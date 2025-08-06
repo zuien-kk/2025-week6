@@ -223,4 +223,31 @@ $bp-mb-max: ($bg-pt-max - $bp-max-space * 2) * -1;
 
 
 
+// 感覺小螢幕左側文字會跑版不知道為什麼
+// 先用 media 限縮樣式範圍為 sm 以上
+// 手機版則保持 .row 原始 margin-right 設定
+
+@media(min-width: map-get($breakpoints,sm)){
+
+  // Billy.Ji 建議寫法
+  // margin-right: calc(-50vw + 50% + 24px);
+
+  // -50vw + 50%
+  // 應該是指 (50vw - 50%) * -1 的意思
+  // 就是（現在螢幕寬度的一半 - 現在容器寬度的一半 ＝ 現在螢幕右邊界與容器右邊界之間的差）的數值要以負值呈現
+  // 這樣就能靠著 margin 負值和響應式單位（vw %）自動推出螢幕跟容器右邊界之間的的間距
+
+  // 24px 應該是一個 gutter 寬的意思
+  // 感覺不加也沒有Ｘ軸的樣子
+  // 也可能目前寫的結構有默默處理掉這一塊
+  // 不是很懂先不要加好了
+
+  .index-story-row{
+    margin-right: calc((50vw - 50%) * -1);
+  }
+}
+
+
+
+
 
