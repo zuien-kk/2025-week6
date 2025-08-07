@@ -222,7 +222,6 @@ $bp-mb-max: ($bg-pt-max - $bp-max-space * 2) * -1;
 }
 
 
-
 // 感覺小螢幕左側文字會跑版不知道為什麼
 // 先用 media 限縮樣式範圍為 sm 以上
 // 手機版則保持 .row 原始 margin-right 設定
@@ -242,8 +241,34 @@ $bp-mb-max: ($bg-pt-max - $bp-max-space * 2) * -1;
   // 也可能目前寫的結構有默默處理掉這一塊
   // 不是很懂先不要加好了
 
+  // 8/7
+  // 由於 index-story-row 上一個 commit 會出現 Ｘ 軸
+  // 但我的 13寸 mac 找不到 Ｘ 軸
+  // 據卡斯伯老師所說是螢幕不夠大造成的
+  // 過程也有嘗試很多種方式找 Ｘ 軸並拍成影片，但徒勞無功
+  // 所以改回 Billy.Ji 助教建議的寫法：margin-right: calc(-50vw + 50% + 24px);
+  
+  // 尋找Ｘ軸過程的影片如下：
+
+  // 找X軸的過程:
+  // https://youtu.be/4Ex9T4ThgKQ
+  // 尋找Ｘ軸（二）:
+  // https://youtu.be/TjoMYVxQ4Ew
+  // 尋找Ｘ軸（三）（螢幕放大500%會在約216px以下出現）:
+  // https://youtu.be/0pAi3PIMFr4
+  // 尋找Ｘ軸（四）（safari ）:
+  // https://youtu.be/tGAfbu4mGIc
+  // 尋找Ｘ軸（五）（在網址列沒有放大鏡的 icon 的情況找Ｘ軸）:
+  // https://youtu.be/8dyg19_xPrE
+
+  // 儘管目前在本地端寫作業是沒有 Ｘ 軸的
+  // 但礙於設備限制有可能沒辦法如實報錯隱蔽 Ｘ 軸
+  // 真的已經盡全力在宛如一片漆黑的情境除錯 Ｘ 軸問題
+  // 如果有 Ｘ 軸的話，不知助教可否明確指出並提供具體修改方向呢？
+  // 那就麻煩助教，助教辛苦了！
+
   .index-story-row{
-    margin-right: calc((50vw - 50%) * -1);
+    margin-right: calc(-50vw + 50% + 24px);
   }
 }
 
